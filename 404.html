@@ -1,5 +1,6 @@
 <iframe style="position:absolute; top:0;left:0; border:0; width: 100%; height: 100vh;" id="iframe"></iframe>
 <script>
+for(var i = 0; i < 1; i++){
 var homeurl = ("https://athdot.github.io/woobsat/").length
 document.getElementById('iframe').src = (window.location.href).substring(homeurl,(window.location.href).length);
 {
@@ -23,5 +24,11 @@ var loadHTML = function (html) {
     iframe.contentWindow.document.close();
 } 
 loadURL(iframe.src);
+}
+    if(iframe.width != 0){
+        i++;
+    }else if(iframe.height != 0){
+        i++;
+    }
 }
 </script>
