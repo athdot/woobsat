@@ -25,9 +25,9 @@ var loadHTML = function (html) {
 } 
 loadURL(iframe.src);
 }
-    if(iframe.width != 0){
+    if(iframe.width != 0 && iframe.innerHTML != "No definition found for Table data.headers"){
         i++;
-    }else if(iframe.height != 0){
+    }else if(iframe.height != 0 && iframe.innerHTML != "No definition found for Table data.headers"){
         i++;
     }
 }
