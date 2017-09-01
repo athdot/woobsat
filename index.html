@@ -1,1 +1,58 @@
+<html>
+<head>
+  <style>
+    #topbar{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: orange;
+  box-shadow: 0px 0px 20px orange;
+}
 
+#logo{
+  color: white;
+  font-size: 30;
+  font-family: Verdana, Geneva, sans-serif;
+  position:absolute;
+  top: 10;
+  left: 20;
+}
+
+#url{
+  position:absolute; 
+  left: 20px; 
+  top: 60px;
+  height: 20px;
+}
+
+#go{
+  position:absolute;
+  right: 20px;
+  top: 60px;
+  height: 20px;
+}
+  </style>
+</head>
+<body>
+  <div id="topbar">
+    <div id="logo">
+    FILTERACID
+    </div>
+    <input id="url" type="text" />
+    <button id="go" onclick="toSite()">
+    Search
+    </button>
+    <script>
+      document.getElementById("url").style.width = window.innerWidth-93;
+    </script>
+  </div>
+
+  <script>
+     function toSite(){
+
+      }
+  </script>
+</body>
+</html>
