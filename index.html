@@ -1,58 +1,81 @@
 <html>
+
 <head>
-  <style>
-    #topbar{
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: orange;
-  box-shadow: 0px 0px 20px orange;
-}
+    <title>IXL Learning</title>
+    <link rel="shortcut icon" href="https://www.ixl.com/dv/XgzxlF-4gwuz7kmIyPccYcBGeJA/yui3/opengraph/assets/square_og_ixl.png" type="image/x-icon" />
+    <style>
+        #topbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: orange;
+            box-shadow: 0px 0px 20px orange;
+            z-index: 10;
+        }
 
-#logo{
-  color: white;
-  font-size: 30;
-  font-family: Verdana, Geneva, sans-serif;
-  position:absolute;
-  top: 10;
-  left: 20;
-}
+        #logo {
+            color: white;
+            font-size: 30;
+            font-family: Verdana, Geneva, sans-serif;
+            position: absolute;
+            top: 10;
+            left: 20;
+        }
 
-#url{
-  position:absolute; 
-  left: 20px; 
-  top: 60px;
-  height: 20px;
-}
+        #url {
+            position: absolute;
+            left: 20px;
+            top: 60px;
+            height: 20px;
+        }
 
-#go{
-  position:absolute;
-  right: 20px;
-  top: 60px;
-  height: 20px;
-}
-  </style>
+        #go {
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            height: 20px;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="topbar">
-    <div id="logo">
-    FILTERACID
-    </div>
-    <input id="url" type="text" />
-    <button id="go" onclick="toSite()">
+    <div id="topbar">
+        <div id="logo">
+            FILTERACID
+        </div>
+        <input id="url" type="text" />
+        <button id="go" onclick="toSite()">
     Search
     </button>
-    <script>
-      document.getElementById("url").style.width = window.innerWidth-93;
-    </script>
-  </div>
+        <script>
+            document.getElementById("url").style.width = window.innerWidth - 100;
+        </script>
+    </div>
 
-  <script>
-     function toSite(){
+    <div id="frame">
+        <iframe src="about:blank" style="position:absolute; top: 100px; left: 0; width: 100%; border: none; z-index: 1;" id="yeet">
+Your Browser does not support Iframes
+</iframe>
+        <script>
+            document.getElementById("yeet").style.height = window.innerHeight - 100;
+        </script>
+        <script>
+            function toSite() {
+                document.getElementById("yeet").src = "https://athdot.github.io/woobsat/" + document.getElementById("url").value;
+                reloadPage();
+            }
 
-      }
-  </script>
+            function reloadPage() {
+                for (var i = 0; i < 100; i++) {
+                    var iframe = document.getElementById("yeet");
+                    iframe.src = iframe.src;
+                }
+            }
+        </script>
+    </div>
+
 </body>
+
 </html>
